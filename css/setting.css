@@ -1,0 +1,339 @@
+:root {
+    /* Brand */
+    --primary: #2C70DF;
+    --primary-hover: #1F64D5;
+
+    /* Sidebar */
+    --sidebar: #182A49;
+    --sidebar-light: #21365A;
+    --sidebar-active: #2C70DF;
+
+    /* Background */
+    --page-bg: #F6F9FE;
+    --card-bg: #FFFFFF;
+
+    /* Text */
+    --text-primary: #172B4D;
+    --text-secondary: #6B7C93;
+    --text-muted: #8A9AB5;
+
+    /* Borders */
+    --border: #DCE8F7;
+
+    /* Appearance */
+    --appearance: #2C70DF;
+    --appearance-light: #EAF3FF;
+
+    /* Data Management */
+    --data: #20B486;
+    --data-light: #E9F9F3;
+
+    /* Language */
+    --language: #7357D9;
+    --language-light: #F1EEFF;
+
+    /* Notifications */
+    --notification: #2C70DF;
+    --notification-light: #EAF3FF;
+
+    /* Danger Zone */
+    --danger: #F0444F;
+    --danger-light: #FFF0F1;
+
+    /* Controls */
+    --toggle-active: #2C70DF;
+    --toggle-inactive: #C8D4E5;
+
+    /* Common */
+    --white: #FFFFFF;
+}
+
+.dark {
+    --page-bg: #0F172A;
+    --card-bg: #1E293B;
+    --text-primary: #F1F5F9;
+    --text-secondary: #94A3B8;
+    --text-muted: #64748B;
+    --border: #334155;
+    --white: #1E293B;
+
+    /* Sidebar thoda aur dark rakha, already dark tha */
+    --sidebar: #0B1526;
+    --sidebar-light: #16233D;
+
+    --blue-light: rgba(44, 112, 223, 0.15);
+    --green-light: rgba(32, 180, 134, 0.15);
+    --purple-light: rgba(115, 87, 217, 0.15);
+    --pink-light: rgba(232, 79, 155, 0.15);
+    --male-light: rgba(44, 112, 223, 0.15);
+    --female-light: rgba(232, 79, 155, 0.15);
+    --input-bg: #0F172A;
+    --input-border: #334155;
+}
+
+.settingIcon {
+    color: var(--primary);
+}
+
+.heroSection {
+    justify-content: flex-start;
+}
+
+.cards {
+    align-items: flex-start;
+    flex-grow: 1;
+    gap: 1rem;
+    padding: 1rem;
+    border-radius: .5rem;
+    background-color: var(--white);
+}
+
+.themes {
+    width: 100%;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: .5rem;
+}
+
+.themeBoxes {
+    width: 100%;
+    gap: 1rem;
+}
+
+.themeMode {
+    font-size: 1rem;
+    flex-grow: 1;
+    padding: 1rem;
+    gap: .5rem;
+    align-items: flex-start;
+    border: 1px solid var(--border);
+    border-radius: .5rem;
+}
+
+.themeText {
+    align-items: flex-start;
+}
+
+.dashIcon {
+    color: var(--primary);
+}
+
+.mode {
+    /* font-size: .8rem; */
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.dataItem {
+    width: 100%;
+    justify-content: space-between;
+    padding: 1rem;
+    border-radius: .5rem;
+}
+
+.export {
+    background-color: var(--data-light);
+}
+
+.import {
+    background-color: var(--appearance-light);
+}
+
+.loadDemo {
+    background-color: var(--language-light);
+}
+
+.clearAll {
+    background-color: var(--danger-light);
+}
+
+.itemContent {
+    gap: 1rem;
+}
+
+.exportIcon {
+    color: var(--data);
+    background-color: var(--data-light);
+}
+
+.loadIcon {
+    color: var(--language);
+    background-color: var(--language-light);
+}
+
+.clearIcon {
+    color: var(--danger);
+    background-color: var(--danger-light);
+}
+
+.btn {
+    color: var(--white);
+    padding: .5rem 1.5rem;
+    border-radius: .5rem;
+    white-space: nowrap;
+}
+
+.exportBtn {
+    background-color: var(--data);
+}
+
+.importBtn {
+    background-color: var(--appearance);
+}
+
+.loadBtn {
+    background-color: var(--language);
+}
+
+.clearBtn {
+    background-color: var(--danger);
+}
+
+.langNotiSection {
+    align-items: initial;
+}
+
+.languageBox {
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.inputFields {
+    width: 100%;
+    justify-content: flex-start;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.collectSetting {
+    align-items: initial;
+    flex-grow: 1;
+    min-width: 200px;
+    gap: .3rem;
+}
+
+label {
+    color: var(--text-primary);
+    font-weight: 600;
+    font-size: .8rem;
+}
+
+.setIcon {
+    padding: .5rem;
+    background-color: var(--appearance-light);
+}
+
+.setIcon>svg {
+    width: fit-content;
+    height: 1rem;
+}
+
+.inputBox {
+    padding-right: .5rem;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    border-radius: .5rem;
+}
+
+.settingInput {
+    border: none;
+    width: 100%;
+    padding: .5rem;
+    outline: none;
+}
+
+.switch {
+    position: relative;
+    display: flex;
+    width: 3rem;
+    height: 1.5rem;
+    flex-shrink: 0;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.track {
+    position: absolute;
+    inset: 0;
+    background-color: #e2e5ec;
+    border-radius: 3rem;
+    cursor: pointer;
+    transition: .2s ease;
+}
+
+.track::before {
+    content: '';
+    position: absolute;
+    width: 1.5rem;
+    height: 1.3rem;
+    left: 3px;
+    top: 2px;
+    background-color: #FFFFFF;
+    border-radius: 50%;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+    transition: 0.2s ease;
+}
+
+.switch input:checked+.track {
+    background-color: #2563eb;
+}
+
+.switch input:checked+.track::before {
+    transform: translateX(18px);
+}
+
+.dangerSection {
+    gap: 1rem;
+    background-color: var(--danger-light);
+}
+
+.alertIcon {
+    background-color: var(--danger-light);
+    color: var(--danger);
+}
+
+.dangerAction {
+    width: 100%;
+    justify-content: space-between;
+    padding: 1rem;
+    background-color: var(--white);
+    border-radius: .5rem;
+}
+
+.actionContent {
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.eraseDataBtn {
+    background-color: var(--danger);
+}
+
+
+@keyframes modalPop {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@media (min-width: 1246px) {
+    .heroSection {
+        position: relative;
+        align-items: flex-start;
+    }
+
+    .appearanceSet {
+        position: sticky;
+        top: 1rem;
+    }
+}

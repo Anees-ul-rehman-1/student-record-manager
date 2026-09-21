@@ -1,0 +1,468 @@
+:root {
+    /* Brand */
+    --primary: #2C70DF;
+    --primary-hover: #1F64D5;
+
+    /* Sidebar */
+    --sidebar: #182A49;
+    --sidebar-light: #21365A;
+    --sidebar-active: #2C70DF;
+
+    /* Background */
+    --page-bg: #F6F9FE;
+    --card-bg: #FFFFFF;
+
+    /* Text */
+    --text-primary: #172B4D;
+    --text-secondary: #6B7C93;
+    --text-muted: #8A9AB5;
+
+    /* Borders */
+    --border: #DCE8F7;
+
+    /* Search / Filters */
+    --input-bg: #F8FBFF;
+    --input-border: #DCE8F7;
+    --input-focus: #2C70DF;
+
+    /* Student Status */
+    --male: #2C70DF;
+    --male-light: #EAF3FF;
+
+    --female: #E84F9B;
+    --female-light: #FFF0F7;
+
+    /* Actions */
+    --view: #2C70DF;
+    --edit: #20B486;
+    --delete: #F0444F;
+
+    /* Pagination */
+    --pagination-active: #2C70DF;
+    --pagination-hover: #EAF3FF;
+
+    /* Common */
+    --white: #FFFFFF;
+}
+
+.dark {
+    --page-bg: #0F172A;
+    --card-bg: #1E293B;
+    --text-primary: #F1F5F9;
+    --text-secondary: #94A3B8;
+    --text-muted: #64748B;
+    --border: #334155;
+    --white: #1E293B;
+
+    /* Sidebar thoda aur dark rakha, already dark tha */
+    --sidebar: #0B1526;
+    --sidebar-light: #16233D;
+
+    --blue-light: rgba(44, 112, 223, 0.15);
+    --green-light: rgba(32, 180, 134, 0.15);
+    --purple-light: rgba(115, 87, 217, 0.15);
+    --pink-light: rgba(232, 79, 155, 0.15);
+    --male-light: rgba(44, 112, 223, 0.15);
+    --female-light: rgba(232, 79, 155, 0.15);
+    --input-bg: #0F172A;
+    --input-border: #334155;
+}
+
+.iconHeading {
+    align-items: flex-start;
+}
+
+.addStuBtn {
+    text-decoration: none;
+    gap: .5rem;
+    background-color: var(--primary);
+    color: var(--white);
+    padding: .5rem 1rem;
+    border-radius: .5rem;
+    font-weight: 600;
+    transition: 0.4s ease;
+}
+
+.addStuBtn:hover {
+    transform: translateY(-5px) scale(1.01);
+}
+
+/* ACTION SECTION  */
+.actionSection {
+    justify-content: flex-start;
+}
+
+.totals {
+    flex-grow: 1;
+    justify-content: flex-start;
+    background-color: var(--white);
+    padding: 1rem;
+    border-radius: .5rem;
+}
+
+.dashIcon {
+    color: var(--male);
+    width: 2rem;
+    height: 2rem;
+    border-radius: 100%;
+    background-color: var(--male-light);
+}
+
+.textContent {
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: .5rem;
+}
+
+.totalNum {
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+.greenText {
+    color: var(--edit);
+}
+
+.studentTable {
+    overflow-x: auto;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+thead tr th:first-child {
+    border-top-left-radius: .5rem;
+}
+
+thead tr th:last-child {
+    border-top-right-radius: .5rem;
+}
+
+th {
+    background-color: var(--border);
+}
+
+th,
+td {
+    white-space: nowrap;
+    border-bottom: 1px solid var(--border);
+    padding: 1rem;
+    text-align: start;
+}
+
+
+td.stackRow {
+    justify-content: flex-start;
+    gap: 1rem;
+}
+
+.stuProfile {
+    width: 2rem;
+    border-radius: 100%;
+}
+
+.nameRoll {
+    align-items: flex-start;
+}
+
+.rollNum {
+    font-size: .8remm;
+}
+
+/*  VIEW MODEL STYLING */
+.editStudentModal,
+.viewStudentModal {
+    display: none;
+    position: fixed;
+    width: 100%;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    transition: 0.5s ease;
+    overflow: auto;
+}
+
+.showViewModal {
+    display: flex;
+}
+
+.viewBox {
+    position: absolute;
+    top: 1rem;
+    padding: 1.5rem;
+    background-color: var(--white);
+    width: min(100% - 3rem, 60rem);
+    border-radius: 1rem;
+    gap: 1rem;
+}
+
+
+
+.boxHeader {
+    width: 100%;
+    justify-content: space-between;
+}
+
+.eyeIcon {
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: var(--primary);
+    color: var(--white);
+    border-radius: 100%;
+}
+
+.profileBox {
+    width: 100%;
+    gap: 1rem;
+    padding: 1rem;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background-color: var(--page-bg);
+    border-radius: 1rem 1rem 0 0;
+    border: 1px solid var(--border);
+    flex-direction: column;
+}
+
+.imageBox {
+    width: 13rem;
+    aspect-ratio: 1;
+    border: 1px solid var(--border);
+    overflow: hidden;
+    border-radius: .5rem;
+
+}
+
+.modalImages {
+    width: 100%;
+}
+
+.studentDetails {
+    width: 100%;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.detailItems {
+    gap: .5rem;
+    align-items: flex-start;
+}
+
+.detailItem {
+    gap: 1rem;
+}
+
+.studentName {
+    color: var(--text-primary);
+    font-weight: 800;
+}
+
+.itemlabel {
+    align-items: flex-end;
+    gap: .5rem;
+}
+
+.itemlabel>svg {
+    width: 1.1rem;
+    color: var(--primary);
+}
+
+.activeTag {
+    gap: .5rem;
+    background-color: #E0F9E0;
+    color: var(--edit);
+    padding: .5rem 1rem;
+    border-radius: 1.5rem;
+    border: 1px solid var(--border);
+    width: fit-content;
+    height: fit-content;
+}
+
+/* INFORMATION BOX */
+.informationContainer {
+    align-items: flex-start;
+    width: 100%;
+    gap: 1rem;
+    border: 1px solid var(--border);
+    border-radius: 0 0 1rem 1rem;
+}
+
+.informationAction {
+    padding: 1rem;
+    width: 100%;
+    justify-content: space-around;
+    border-bottom: 1px solid var(--border);
+    background-color: var(--page-bg);
+}
+
+.stuInfoBox {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.infoBtn {
+    align-items: flex-end;
+    gap: .5rem;
+}
+
+.infoBox {
+    display: flex;
+    flex-direction: column;
+    padding: .5rem 1rem;
+    margin-inline: 1rem;
+    width: calc(100% - 2rem);
+    background-color: var(--page-bg);
+    border: 1px solid var(--border);
+    border-radius: .3rem;
+    gap: 1rem;
+}
+
+.infoIcons {
+    justify-content: flex-start;
+    gap: .5rem
+}
+
+.infoIcon {
+    color: var(--primary);
+    background-color: var(--input-border);
+    width: 2rem;
+    height: 2rem;
+    border-radius: .5rem;
+}
+
+.addressBox {
+    margin-bottom: 2rem;
+}
+
+.studentInformation {
+    padding-inline: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.studentData {
+    justify-content: space-between;
+    display: flex;
+}
+
+.address {
+    padding: 4rem;
+}
+
+.closeBtnContainer {
+    width: 100%;
+    text-align: end;
+}
+
+.activeInfoBtn {
+    color: var(--primary);
+}
+
+.closeText {
+    padding: .5rem 1rem;
+    font-size: 1rem;
+    border: 1px solid var(--border);
+}
+
+.hideInfo {
+    display: none;
+}
+
+/*EDIT MODEL STYLING */
+.editImageBox {
+    width: 7rem;
+    border: 1px solid var(--border);
+    border-radius: .5rem;
+}
+
+.editProfileBox {
+    padding: 1rem;
+    width: 100%;
+    justify-content: flex-start;
+    gap: 1.5rem;
+    background-color: var(--page-bg);
+    border-radius: 1rem 1rem 0 0;
+}
+
+.uploadNewPic {
+    padding: .5rem 1rem;
+    border: 1px solid var(--border);
+    border-radius: .5rem;
+}
+
+.editStudentInfo {
+    align-items: initial;
+    width: 100%;
+    border: 1px solid var(--border);
+    gap: .5rem;
+}
+
+.personalInfoHeader {
+    width: 100%;
+    padding: .5rem 1rem;
+    background-color: var(--page-bg);
+}
+
+.editInputFields {
+    display: grid;
+    padding: .5rem 1rem;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.editData {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    width: 100%;
+}
+
+.inputField {
+    padding: .5rem;
+    width: 100%;
+    border-radius: .5rem;
+    border: 1px solid var(--border);
+}
+
+.contactFields {
+    border-radius: 0 0 1rem 1rem;
+}
+
+.editModalAction {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+}
+
+.saveChanges {
+    padding: .5rem 1rem;
+    background-color: var(--primary);
+    color: var(--white);
+    border-radius: .5rem;
+}
+
+.saveChanges:hover {
+    opacity: 0.9;
+}
+
+.cancelBtn {
+    padding: .5rem 1rem;
+    border-radius: .5rem;
+    border: 1px solid var(--border);
+}
+
+@media (min-width:620px) {
+    .profileBox {
+        flex-direction: row;
+        align-items: flex-end;
+    }
+
+    .editInputFields {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ===========================
+     SEO PRIMARY META TAGS
+    ================================ -->
+    <title>Dashboard | Student Record Manager</title>
+    <meta name="title" content="Dashboard | Student Record Manager">
+    <meta name="description"
+        content="View a quick overview of all students, recent activity, and key stats on the Student Record Manager dashboard.">
+    <meta name="author" content="Anees Ul Rehman">
+    <meta name="keywords"
+        content="student dashboard, school dashboard, student overview, student management dashboard, school student system">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="">
+
+    <!-- ===========================
+     OPEN GRAPH
+     Facebook / LinkedIn / Social Sharing
+    ================================ -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta property="og:title" content="Dashboard | Student Record Manager">
+    <meta property="og:description"
+        content="View a quick overview of all students, recent activity, and key stats on the Student Record Manager dashboard.">
+    <meta property="og:image" content="">
+    <meta property="og:site_name" content="Student Record Manager">
+
+    <!-- ===========================
+     TWITTER / X CARD
+    ================================ -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Dashboard | Student Record Manager">
+    <meta name="twitter:description"
+        content="View a quick overview of all students, recent activity, and key stats on the Student Record Manager dashboard.">
+    <meta name="twitter:image" content="">
+
+    <!-- ===========================
+     FAVICON
+    ================================ -->
+    <link rel="icon" type="image/webP" href="/assets/images/logo.png">
+    <meta name="theme-color" content="#2C70DF">
+
+    <!-- ===========================
+    FONT FAMILY
+    ================================ -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- ===========================
+     CSS
+    ================================ -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+
+    <!-- =========================
+    THEME RENDER
+    ============================= -->
+    <script>
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark') {
+            document.documentElement.classList.add('dark');
+        }
+    </script>
+</head>
+
+<body>
+    <div class="appLayout">
+        <aside class="isCollapsed sidebar stack">
+            <div class="sidebarTopContent">
+                <a href="/index.html" class="logoLink stackRow" aria-label="Student Record Manager Home">
+                    <img class="logoImg" src="/assets/images/logo.png" alt="">
+                    <h2 class="logoText itemToToggle hideNavItem" aria-hidden="true">Student Record <br> Manger</h2>
+                </a>
+                <div class="sidebarNav" aria-label="Main Navigation">
+                    <ul>
+                        <li>
+                            <a href="/index.html" class="navItem stackRow">
+                                <i data-lucide="home"></i>
+                                <span class="navText itemToToggle hideNavItem">Dashboard</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="pages/students.html" class="navItem stackRow">
+                                <i data-lucide="user-group"></i>
+                                <span class="navText itemToToggle hideNavItem">Students</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="pages/addStudent.html" class="navItem stackRow">
+                                <i data-lucide="plus"></i>
+                                <span class="navText itemToToggle hideNavItem">Add Students</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="pages/setting.html" class="navItem stackRow">
+                                <i data-lucide="settings"></i>
+                                <span class="navText itemToToggle hideNavItem">Settings</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="sidebarBottomContent">
+                <div class="bottomContent stack itemToToggle hideNavItem">
+                    <i data-lucide="graduation-cap"></i>
+                    <p>Better Records <br> Brigher Future</p>
+                    <img class="bottomSvg" src="assets/images/wave_single.png" alt="">
+                </div>
+                <div class="bottomWindow stackRow">
+                    <button class="toggleBtn" aria-label="Toggle Sidebar">
+                        <i data-lucide="panel-left-close"></i>
+                    </button>
+                </div>
+            </div>
+        </aside>
+        <div class="mainWrapper">
+            <header>
+                <nav class="headerNav stackRow">
+                    <div class="searchWrapper stack">
+                        <div class="searchContainer stackRow">
+                            <label for="searchStu">
+                                <i data-lucide="search"></i>
+                            </label>
+                            <input class="searchInput" type="text" id="searchStu"
+                                placeholder="Search student by name, roll no, etc..." aria-label="Search student">
+                        </div>
+                        <div class="searchSuggestions"></div>
+                    </div>
+                    <div class="navRightContent stackRow">
+                        <button class="btn bellBtn">
+                            <i data-lucide="bell"></i>
+                        </button>
+                        <img class="profileImage" src="assets/images/profile.png" alt="User profile">
+                    </div>
+                </nav>
+            </header>
+            <main>
+                <section class="headingContainer stackRow">
+                    <div class="headingBio">
+                        <h1>Dashboard</h1>
+                        <p>Welcome back! Here's an overview for your student records.</p>
+                    </div>
+                    <div class="headingDate stackRow">
+                        <i data-lucide="calendar"></i>
+                        <span class="todayDate"></span>
+                    </div>
+                </section>
+                <section class="heroSection stackRow">
+                    <div class="heroBox stack totalStuBox">
+                        <div class="totalStuIcon dashIcon stackRow">
+                            <i data-lucide="users"></i>
+                        </div>
+                        <p>Total Students</p>
+                        <a class="totalNums stackRow" href="/pages/students.html">
+                            <span class="totalStu totals">-</span>
+                            &gt;
+                        </a>
+                        <p><span class="greenText">&uparrow; +12</span> from last month</p>
+                    </div>
+                    <div class="heroBox stack bigClassBox">
+                        <div class="bigClassIcon dashIcon stackRow">
+                            <i data-lucide="graduation-cap"></i>
+                        </div>
+                        <p>Class <span class="bigClassName"></span> Students</p>
+                        <a class="totalNums stackRow" href="/pages/students.html">
+                            <span class="bigClass totals">-</span>
+                            &gt;
+                        </a>
+                        <p><span class="greenText">&uparrow; +12</span> from last month</p>
+                    </div>
+                    <div class="heroBox stack totalMaleBox">
+                        <div class="dashIcon maleIcon stackRow">
+                            <i data-lucide="mars"></i>
+                        </div>
+                        <p>Total Males</p>
+                        <a class="totalNums stackRow" href="/pages/students.html">
+                            <span class="totalMale totals">-</span>
+                            &gt;
+                        </a>
+                        <p><span class="greenText">&uparrow; +12</span> from last month</p>
+                    </div>
+                    <div class="heroBox stack totalFemaleBox">
+                        <div class="dashIcon femaleIcon stackRow">
+                            <i data-lucide="venus"></i>
+                        </div>
+                        <p>Total Females</p>
+                        <a class="totalNums stackRow" href="/pages/students.html">
+                            <span class="totalFemale totals">-</span>
+                            &gt;
+                        </a>
+                        <p><span class="greenText">&uparrow; +12</span> from last month</p>
+                    </div>
+                </section>
+                <section class="graphSection stackRow">
+                    <div class="studentByClass heroBox">
+                        <div class="byClassHeader stackRow">
+                            <div class="iconHeading stackRow">
+                                <div class="byClasIcon dashIcon stackRow">
+                                    <i data-lucide="book-open"></i>
+                                </div>
+                                <h2>Students by class</h2>
+                            </div>
+                            <select id="classesDropdown">
+                                <option value="">All classes</option>
+                            </select>
+                        </div>
+                        <div class="chartGraph stackRow">
+                            <canvas id="classChart"></canvas>
+                        </div>
+                    </div>
+                    <div class="studentGender stack heroBox">
+                        <div class="iconHeading stackRow">
+                            <div class="byClasIcon dashIcon stackRow">
+                                <i data-lucide="blend"></i>
+                            </div>
+                            <h2>Gender distribution</h2>
+                        </div>
+                        <div class="chartContainer stackRow">
+                            <div class="donutChart stackRow" id="donutChart">
+                                <div class="chartCenter stack">
+                                    <span class="totalStu">-</span>
+                                    <span class="totalStuLabel">Total Students</span>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="genderNums stackRow">
+                            <div class="gender stackRow">
+                                <div class="dot"></div>
+                                <span>Male</span>
+                                <span class="totalGender totalMale">-</span>
+                            </div>
+                            <div class="gender stackRow">
+                                <div class="dot femaleDot"></div>
+                                <span>Female</span>
+                                <span class="totalGender totalFemale">-</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="bottomSection stackRow">
+                    <div class="recentContainer stack heroBox">
+                        <div class="recentHeader stackRow">
+                            <div class="iconHeading stackRow">
+                                <div class="dashIcon quickIcon stack">
+                                    <i data-lucide="history"></i>
+                                </div>
+                                <h2>Recently Added Students</h2>
+                            </div>
+                            <a class="viewAll" href="pages/students.html">View All</a>
+                        </div>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Student</th>
+                                    <th>Class & Section</th>
+                                    <th>Added On</th>
+                                </tr>
+                            </thead>
+                            <tbody class="tBody"></tbody>
+                        </table>
+                    </div>
+                    <div class="quickActions stack heroBox">
+                        <div class="iconHeading stackRow">
+                            <div class="quickIcon dashIcon stack">
+                                <i data-lucide="zap"></i>
+                            </div>
+                            <h2>Quick Actions</h2>
+                        </div>
+                        <a href="/pages/addStudent.html" class="actionItem addAct stackRow">
+                            <div class="itemContent stackRow">
+                                <i data-lucide="plus"></i>
+                                <div class="itemText">
+                                    <h3>Add Student</h3>
+                                    Register a new student
+                                </div>
+                            </div>
+                            &gt;
+                        </a>
+                        <a href="/pages/students.html" class="actionItem viewAct stackRow">
+                            <div class="itemContent stackRow">
+                                <i data-lucide="users"></i>
+                                <div class="itemText">
+                                    <h3>View All Students</h3>
+                                    Browse student records
+                                </div>
+                            </div>
+                            &gt;
+                        </a>
+                        <button type="button" class="actionItem btn importBtn importAct stackRow">
+                            <div class="itemContent stackRow">
+                                <i data-lucide="upload"></i>
+                                <div class="itemText">
+                                    <h3>Import Data</h3>
+                                    Load from file
+                                </div>
+                            </div>
+                        </button>
+                        <input type="file" class="hiddenInput" accept=".json" hidden>
+                        <button type="button" class="actionItem btn exportBtn exportAct stackRow">
+                            <div class="itemContent stackRow">
+                                <i data-lucide="download"></i>
+                                <div class="itemText">
+                                    <h3>Export Data</h3>
+                                    Save to file
+                                </div>
+                            </div>
+                        </button>
+                    </div>
+                </section>
+            </main>
+            <footer>
+                <p>&copy; 2026 Student Record Manager. All right reserved</p>
+                <span>v.1.0.0</span>
+            </footer>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+    <script src="js/app.js"></script>
+    <script src="js/data.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/dashboard.js"></script>
+</body>
+
+</html>

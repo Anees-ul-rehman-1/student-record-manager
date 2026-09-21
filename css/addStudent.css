@@ -1,0 +1,225 @@
+:root {
+    /* Brand */
+    --primary: #2C70DF;
+    --primary-hover: #1F64D5;
+
+    /* Sidebar */
+    --sidebar: #182A49;
+    --sidebar-light: #21365A;
+    --sidebar-active: #2C70DF;
+
+    /* Background */
+    --page-bg: #F6F9FE;
+    --card-bg: #FFFFFF;
+
+    /* Text */
+    --text-primary: #172B4D;
+    --text-secondary: #6B7C93;
+    --text-muted: #8A9AB5;
+
+    /* Borders */
+    --border: #DCE8F7;
+
+    /* Form */
+    --input-bg: #F8FBFF;
+    --input-border: #D6E4F5;
+    --input-focus: #2C70DF;
+
+    /* Labels */
+    --label: #314B70;
+    --required: #F0444F;
+
+    /* Section Icons */
+    --personal: #2C70DF;
+    --personal-light: #EAF3FF;
+
+    --academic: #7357D9;
+    --academic-light: #F1EEFF;
+
+    --contact: #20B486;
+    --contact-light: #E9F9F3;
+
+    /* Buttons */
+    --submit: #2C70DF;
+    --submit-hover: #1F64D5;
+
+    --reset: #FFFFFF;
+    --reset-border: #DCE8F7;
+
+    /* Validation */
+    --success: #20B486;
+    --success-light: #E9F9F3;
+
+    --error: #F0444F;
+    --error-light: #FFF0F1;
+
+    /* Common */
+    --white: #FFFFFF;
+}
+
+.dark {
+    --page-bg: #0F172A;
+    --card-bg: #1E293B;
+    --text-primary: #F1F5F9;
+    --text-secondary: #94A3B8;
+    --text-muted: #64748B;
+    --border: #334155;
+    --white: #1E293B;
+
+    /* Sidebar thoda aur dark rakha, already dark tha */
+    --sidebar: #0B1526;
+    --sidebar-light: #16233D;
+
+    --blue-light: rgba(44, 112, 223, 0.15);
+    --green-light: rgba(32, 180, 134, 0.15);
+    --purple-light: rgba(115, 87, 217, 0.15);
+    --pink-light: rgba(232, 79, 155, 0.15);
+    --male-light: rgba(44, 112, 223, 0.15);
+    --female-light: rgba(232, 79, 155, 0.15);
+    --input-bg: #0F172A;
+    --input-border: #334155;
+}
+
+.backBtn {
+    gap: .5rem;
+    font-weight: 600;
+    color: var(--personal);
+    text-decoration: none;
+    padding: .5rem;
+    background-color: var(--personal-light);
+    border-radius: .5rem;
+}
+
+.stuIcon {
+    color: var(--personal);
+}
+
+.formIcons {
+    color: var(--personal);
+}
+
+form.stack {
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 1rem;
+    padding: 2rem 1rem;
+    background-color: var(--white);
+    border-radius: .5rem;
+}
+
+.formSection {
+    width: 100%;
+    border-radius: .5rem;
+    padding: 1rem;
+    gap: 1rem;
+    background-color: var(--page-bg);
+    justify-content: flex-start;
+    align-items: flex-start;
+    border: 1px solid var(--border);
+}
+
+.inputFields {
+    width: 100%;
+    display: grid;
+    gap: 1rem;
+}
+
+.collectData {
+    align-items: flex-start;
+    gap: .5rem;
+}
+
+.inputBox {
+    width: 100%;
+    background-color: var(--white);
+    border: 1px solid var(--border);
+    padding: .5rem 1rem;
+    border-radius: .5rem;
+}
+
+label {
+    font-size: .8rem;
+    color: var(--text-primary);
+    font-weight: 500;
+}
+
+/* IMAGE UPLOAD BOX  */
+.picUploadBox {
+    gap: .5rem;
+    padding-block: 2rem;
+    width: 100%;
+    border: 2px dashed var(--border);
+    border-radius: .5rem;
+}
+
+#studentPhoto {
+    display: none;
+}
+
+.iconCircle {
+    width: 4rem;
+    aspect-ratio: 1;
+    border-radius: 100%;
+    color: var(--personal);
+    background-color: var(--personal-light);
+}
+
+.iconCircle>svg {
+    width: 2rem;
+    height: 2rem;
+    /* stroke-width: 0; */
+    fill: var(--personal);
+}
+
+.uploadHint {
+    font-size: .7rem;
+    color: var(--text-secondary);
+}
+
+input.phoneNumber[type="number"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+/* Chrome, Safari aur Edge ke andar wale arrows ko gayab karne ke liye */
+input.phoneNumber::-webkit-outer-spin-button,
+input.phoneNumber::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox ke andar se arrows hataane ke liye */
+input.phoneNumber[type="number"] {
+    -moz-appearance: textfield;
+}
+
+/* FORM ACTIONS  */
+.formActions {
+    width: 100%;
+    justify-content: space-between;
+}
+
+.btn {
+    font-weight: 600;
+    border-radius: .5rem;
+    padding: .5rem 1rem;
+    gap: .5rem;
+    border: 1px solid var(--border);
+    background-color: var(--page-bg);
+}
+
+.btn>svg {
+    width: 1rem;
+}
+
+.addConfirm {
+    color: var(--white);
+    background-color: var(--personal);
+}
+
+@media (min-width: 700px) {
+    .inputFields {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

@@ -1,0 +1,415 @@
+/* APP COLOR PLATE */
+:root {
+    /* Brand */
+    --primary: #2C70DF;
+    --primary-hover: #1F64D5;
+
+    /* Sidebar */
+    --sidebar: #182A49;
+    --sidebar-light: #21365A;
+    --sidebar-active: #2C70DF;
+
+    /* Background */
+    --page-bg: #F6F9FE;
+    --card-bg: #FFFFFF;
+
+    /* Text */
+    --text-primary: #172B4D;
+    --text-secondary: #6B7C93;
+    --text-muted: #8A9AB5;
+
+    /* Borders */
+    --border: #DCE8F7;
+
+    /* Dashboard Accents */
+    --blue: #2C70DF;
+    --blue-light: #EAF3FF;
+
+    --green: #20B486;
+    --green-light: #E9F9F3;
+
+    --purple: #7357D9;
+    --purple-light: #F1EEFF;
+
+    --pink: #E84F9B;
+    --pink-light: #FFF0F7;
+
+    /* Status */
+    --success: #20B486;
+    --danger: #F0444F;
+
+    /* Common */
+    --white: #FFFFFF;
+}
+
+.dark {
+    --page-bg: #0F172A;
+    --card-bg: #1E293B;
+    --text-primary: #F1F5F9;
+    --text-secondary: #94A3B8;
+    --white-text: white;
+    --text-muted: #64748B;
+    --border: #334155;
+    --white: #1E293B;
+
+    /* Sidebar thoda aur dark rakha, already dark tha */
+    --sidebar: #0B1526;
+    --sidebar-light: #16233D;
+
+    --blue-light: rgba(44, 112, 223, 0.15);
+    --green-light: rgba(32, 180, 134, 0.15);
+    --purple-light: rgba(115, 87, 217, 0.15);
+    --pink-light: rgba(232, 79, 155, 0.15);
+    --male-light: rgba(44, 112, 223, 0.15);
+    --female-light: rgba(232, 79, 155, 0.15);
+    --input-bg: #0F172A;
+    --input-border: #334155;
+}
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* UTILITY CLASSES */
+.stack {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.stackRow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section {
+    padding: 1rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+h1 {
+    font-size: clamp(1.5rem, 5vw, 2rem);
+    color: var(--text-primary);
+}
+
+h2 {
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
+    color: var(--text-primary);
+}
+
+p {
+    font-size: clamp(.8rem, 2.5vw, 1rem);
+}
+
+.iconHeading {
+    gap: .5rem;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.headingContainer {
+    flex-direction: column-reverse;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: .5rem
+}
+
+.btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.dashIcon {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 100%;
+    color: var(--blue-light);
+    background-color: var(--blue-light);
+}
+
+/* PAGES BODY CSS */
+body {
+    position: relative;
+    font-family: 'Inter', sans-serif;
+    background-color: var(--page-bg);
+    color: var(--text-secondary);
+}
+
+/* APPLAYOUT */
+.appLayout {
+    display: flex;
+    position: relative;
+}
+
+aside.sidebar {
+    position: sticky;
+    top: 0;
+    background-color: var(--sidebar);
+    height: fit-content;
+    height: 100vh;
+    min-height: 100dvh;
+    /* overflow-y: scroll; */
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-shrink: 0;
+}
+
+.isCollapsed {
+    cursor: ew-resize;
+}
+
+.sidebar:hover {
+    background-color: var(--sidebar-light);
+}
+
+.mainWrapper {
+    /* min-width: 0; */
+    /* flex-shrink: 0; */
+    width: 100%;
+}
+
+/* SIDEBAR TOP CONTENT */
+.logoLink {
+    padding-block: 1rem;
+    gap: .5rem;
+    color: var(--white);
+    text-decoration: none;
+}
+
+.logoImg {
+    width: 3rem;
+}
+
+.logoText {
+    font-size: 1rem;
+    text-align: center;
+    color: var(--white-text);
+}
+
+/* SIDEBAR LINKS ITEM */
+.sidebarNav {
+    margin-top: 1rem;
+}
+
+.sidebarTopContent {
+    width: 100%;
+}
+
+.sidebarNav li {
+    list-style-type: none;
+}
+
+.navItem {
+    color: var(--white-text);
+    justify-content: flex-start;
+    align-items: flex-end;
+    gap: .5rem;
+    padding: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    box-shadow: 0 0 1px;
+    transition: .5s ease;
+}
+
+.navItem:hover {
+    transform: translateX(5px);
+    background-color: var(--sidebar);
+}
+
+.hideNavItem {
+    display: none;
+}
+
+/* SIDEBAR BOTTOM CONTENT */
+.sidebarBottomContent {
+    width: 100%;
+}
+
+.bottomContent {
+    gap: .5rem;
+    width: 100%;
+}
+
+.bottomContent>svg {
+    width: 2rem;
+    height: 2rem;
+}
+
+.bottomSvg {
+    width: 100%;
+    max-width: 13rem;
+}
+
+.bottomWindow {
+    border: none;
+    background-color: transparent;
+    justify-content: flex-end;
+    padding: .5rem;
+    border-top: 1px solid var(--text-secondary);
+    /* width: 100%; */
+}
+
+.bottomWindow>button {
+    border: none;
+    background-color: transparent;
+    color: var(--white-text);
+    cursor: pointer;
+}
+
+/* header navbar content */
+.headerNav {
+    justify-content: space-between;
+    padding: .5rem 1rem;
+    background-color: var(--card-bg);
+}
+
+.searchWrapper {
+    width: 70%;
+    position: relative;
+
+
+}
+
+.searchSuggestions {
+    display: none;
+    width: 100%;
+    position: absolute;
+    top: 2.9rem;
+    padding: 1rem;
+    gap: .5rem;
+    background-color: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 1rem;
+}
+
+.showSuggestion {
+    display: grid;
+}
+
+.searchResult {
+    display: flex;
+    justify-content: space-between;
+}
+
+.searchContainer {
+    width: 100%;
+    gap: .5rem;
+    padding: .5rem 1rem;
+    border-radius: 1.5rem;
+    border: 1px solid var(--border);
+    background-color: var(--page-bg);
+}
+
+.searchInput {
+    border: none;
+    background-color: transparent;
+    width: 100%;
+    outline: none;
+}
+
+.navRightContent {
+    gap: 1rem;
+}
+
+.bellBtn {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.profileImage {
+    width: 2.5rem;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    font-size: .8rem;
+    font-weight: 600;
+}
+
+footer p {
+    width: fit-content;
+    text-align: center;
+}
+
+
+/* LIVE DEMO MODEL STYLING */
+.confirmModel {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+
+}
+
+.confirmModel.showModal {
+    display: flex;
+}
+
+.confirmBox {
+    background-color: var(--white);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    width: 90%;
+    max-width: 20rem;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    animation: modalPop 0.25s ease-out;
+    align-items: initial;
+    gap: 1rem;
+}
+
+.confirmBox p {
+    color: #374151;
+    line-height: 1.6;
+}
+
+.confirmActions {
+    justify-content: space-between
+}
+
+.actionBtns {
+    border: none;
+    background-color: none;
+    padding: .5rem 1rem;
+    border-radius: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.cancelBtn {
+    background-color: #f3f4f6;
+    color: var(--text-primary);
+}
+
+.cancelBtn:hover {
+    background-color: #E5E7EB;
+}
+
+.confirmBtn {
+    background-color: #3B82F6;
+    color: var(--white);
+}
+
+.confirmBtn:hover {
+    background-color: #2563eb;
+}
+
+@media (min-width: 740px) {
+    .headingContainer {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+}

@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ===========================
+     SEO PRIMARY META TAGS
+    ================================ -->
+    <title>Settings | Student Record Manager</title>
+    <meta name="title" content="Settings | Student Record Manager">
+    <meta name="description"
+        content="Configure application preferences, account details, and system settings for Student Record Manager.">
+    <meta name="keywords"
+        content="settings, app settings, account settings, student record manager settings, preferences">
+    <meta name="author" content="Anees Ul Rehman">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="">
+
+    <!-- ===========================
+     OPEN GRAPH
+     Facebook / LinkedIn / Social Sharing
+    ================================ -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta property="og:title" content="Settings | Student Record Manager">
+    <meta property="og:description"
+        content="Configure application preferences, account details, and system settings for Student Record Manager.">
+    <meta property="og:image" content="">
+    <meta property="og:site_name" content="Student Record Manager">
+
+    <!-- ===========================
+     TWITTER / X CARD
+    ================================ -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Settings | Student Record Manager">
+    <meta name="twitter:description"
+        content="Configure application preferences, account details, and system settings for Student Record Manager.">
+    <meta name="twitter:image" content="">
+
+    <!-- ===========================
+     FAVICON
+    ================================ -->
+    <link rel="icon" type="image/webP" href="/assets/images/logo.png">
+    <meta name="theme-color" content="#2C70DF">
+
+    <!-- ===========================
+    FONT FAMILY
+    ================================ -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- ===========================
+     CSS
+    ================================ -->
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/setting.css">
+
+    <!-- =========================
+    THEME RENDER
+    ============================= -->
+    <script>
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark') {
+            document.documentElement.classList.add('dark');
+        }
+    </script>
+</head>
+
+<body>
+    <div class="appLayout">
+        <aside class="sidebar stack">
+            <div class="sidebarTopContent">
+                <a href="/index.html" class="logoLink stackRow" aria-label="Student Record Manager Home">
+                    <img class="logoImg" src="/assets/images/logo.png" alt="">
+                    <h2 class="logoText itemToToggle hideNavItem" aria-hidden="true">Student Record <br> Manger</h2>
+                </a>
+                <div class="sidebarNav" aria-label="Main Navigation">
+                    <ul>
+                        <li>
+                            <a href="/index.html" class="navItem stackRow">
+                                <i data-lucide="home"></i>
+                                <span class="navText itemToToggle hideNavItem">Dashboard</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/pages/students.html" class="navItem stackRow">
+                                <i data-lucide="user-group"></i>
+                                <span class="navText itemToToggle hideNavItem">Students</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/pages/addStudent.html" class="navItem stackRow">
+                                <i data-lucide="plus"></i>
+                                <span class="navText itemToToggle hideNavItem">Add Students</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/pages/setting.html" class="navItem stackRow">
+                                <i data-lucide="settings"></i>
+                                <span class="navText itemToToggle hideNavItem">Settings</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="sidebarBottomContent">
+                <div class="bottomContent stack itemToToggle hideNavItem">
+                    <i data-lucide="graduation-cap"></i>
+                    <p>Better Records <br> Brigher Future</p>
+                    <img class="bottomSvg" src="/assets/images/wave_single.png" alt="">
+                </div>
+                <div class="bottomWindow stackRow">
+                    <button class="toggleBtn" aria-label="Toggle Sidebar">
+                        <i data-lucide="panel-left-close"></i>
+                    </button>
+                </div>
+            </div>
+        </aside>
+        <div class="mainWrapper">
+            <header>
+                <nav class="headerNav stackRow">
+                    <div class="searchWrapper stack">
+                        <div class="searchContainer stackRow">
+                            <label for="searchStu">
+                                <i data-lucide="search"></i>
+                            </label>
+                            <input class="searchInput" type="text" id="searchStu"
+                                placeholder="Search student by name, roll no, etc..." aria-label="Search student">
+                        </div>
+                        <div class="searchSuggestions"></div>
+                    </div>
+                    <div class="navRightContent stackRow">
+                        <button class="btn bellBtn">
+                            <i data-lucide="bell"></i>
+                        </button>
+                        <img class="profileImage" src="/assets/images/profile.png" alt="User profile">
+                    </div>
+                </nav>
+            </header>
+            <main>
+                <section class="iconHeading stackRow">
+                    <div class="dashIcon settingIcon stack">
+                        <i data-lucide="users"></i>
+                    </div>
+                    <div>
+                        <h1>Settings</h1>
+                        <p>Manage your application settings, data and preferences.</p>
+                    </div>
+                </section>
+                <section class="heroSection stackRow">
+                    <div class="appearanceSet cards stack">
+                        <div class="iconHeading stackRow">
+                            <div class="dashIcon settingIcon stack">
+                                <i data-lucide="users"></i>
+                            </div>
+                            <div>
+                                <h2>Appearance</h2>
+                                <p>Manage your application settings, data and preferences.</p>
+                            </div>
+                        </div>
+                        <div class="themes stack">
+                            <strong>Theme</strong>
+                            <div class="themeBoxes stackRow">
+                                <button class="themeMode lightTheme stack">
+                                    <div class="dashIcon stack">
+                                        <i data-lucide="sun"></i>
+                                    </div>
+                                    <div class="themeText stack">
+                                        <strong class="mode">Light Mode</strong>
+                                        <p>Clean and bright interface</p>
+                                    </div>
+                                </button>
+                                <button class="themeMode darkTheme stack">
+                                    <div class="dashIcon stack">
+                                        <i data-lucide="moon"></i>
+                                    </div>
+                                    <div class="themeText">
+                                        <strong class="mode">Dark Mode</strong>
+                                        <p>Easy on the eyes</p>
+                                    </div>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cards stack">
+                        <div class="iconHeading stackRow">
+                            <div class="dashIcon settingIcon stack">
+                                <i data-lucide="database-arrow-down"></i>
+                            </div>
+                            <div>
+                                <h2>Data Management</h2>
+                                <p>Import, export and manage your student data.</p>
+                            </div>
+                        </div>
+                        <div class="dataItem export stackRow">
+                            <div class="itemContent stackRow">
+                                <div class="dashIcon exportIcon stack">
+                                    <i data-lucide="hard-drive-download"></i>
+                                </div>
+                                <div>
+                                    <strong>Export Student Data</strong>
+                                    <p>Download all student records as a JSON file.</p>
+                                </div>
+                            </div>
+                            <button type="button" class="btn exportBtn">Export</button>
+                        </div>
+                        <div class="dataItem import stackRow">
+                            <div class="itemContent stackRow">
+                                <div class="dashIcon importIcon stack">
+                                    <i data-lucide="hard-drive-upload"></i>
+                                </div>
+                                <div>
+                                    <strong>Imort Student Data</strong>
+                                    <p>Upload a JSON file to add student records.</p>
+                                </div>
+                            </div>
+                            <button type="button" class="btn importBtn">Import</button>
+                            <input type="file" class="hiddenInput" accept=".json" hidden>
+                        </div>
+                        <div class="dataItem loadDemo stackRow">
+                            <div class="itemContent stackRow">
+                                <div class="dashIcon loadIcon stack">
+                                    <i data-lucide="users"></i>
+                                </div>
+                                <div>
+                                    <strong>Load Demo Students</strong>
+                                    <p>Add sample student data for testing (10+ recoreds).</p>
+                                </div>
+                            </div>
+                            <button type="button" class="btn loadBtn">Load Demo</button>
+                        </div>
+                        <div class="dataItem clearAll stackRow">
+                            <div class="itemContent stackRow">
+                                <div class="dashIcon clearIcon stack">
+                                    <i data-lucide="trash"></i>
+                                </div>
+                                <div>
+                                    <strong>Clear all Student Data</strong>
+                                    <p>Remove all student records from your system.</p>
+                                </div>
+                            </div>
+                            <button type="button" class="btn eraseDataBtn">Clear all</button>
+                        </div>
+                    </div>
+                </section>
+                <section class="langNotiSection stackRow">
+                    <div class="languageBox cards stack">
+                        <div class="iconHeading stackRow">
+                            <div class="dashIcon stack">
+                                <i data-lucide="globe"></i>
+                            </div>
+                            <div>
+                                <h2>Language & Region</h2>
+                                <p>Set your preferred language and regional format.</p>
+                            </div>
+                        </div>
+                        <div class="inputFields stackRow">
+                            <div class="collectSetting stack">
+                                <label for="lang">Language</label>
+                                <div class="inputBox stackRow">
+                                    <div class="setIcon stack">
+                                        <i data-lucide="globe"></i>
+                                    </div>
+                                    <select id="lang" class="settingInput">
+                                        <option value="english">English</option>
+                                        <option value="urdu">Urdu</option>
+                                        <option value="romanUrdu">Roman Urdu</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="collectSetting stack">
+                                <label for="date">Date Format</label>
+                                <div class="inputBox stackRow">
+                                    <div class="setIcon stack">
+                                        <i data-lucide="calendar"></i>
+                                    </div>
+                                    <select id="date" class="settingInput">
+                                        <option value="">DD MMM YYYY</option>
+                                        <option value="">MM DDD YYYY</option>
+                                        <option value="">YY MMM DDDD</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="collectSetting stack">
+                                <label for="time">Time Format</label>
+                                <div class="inputBox stackRow">
+                                    <div class="setIcon stack">
+                                        <i data-lucide="clock-5"></i>
+                                    </div>
+                                    <select id="time" class="settingInput">
+                                        <option value="">12 Hour (AM/PM)</option>
+                                        <option value="">24 Hour</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="notificationBox cards stack">
+                        <div class="iconHeading stackRow">
+                            <div class="dashIcon stack">
+                                <i data-lucide="bell"></i>
+                            </div>
+                            <div>
+                                <h2>Notifications</h2>
+                                <p>Manage your notification preferences.</p>
+                            </div>
+                        </div>
+                        <div class="dataItem stackRow">
+                            <div class="itemContent stackRow">
+                                <div>
+                                    <strong>New student added</strong>
+                                    <p>Get notified when a new student is added.</p>
+                                </div>
+                            </div>
+                            <label class="switch">
+                                <input type="checkbox" checked>
+                                <span class="track"></span>
+                            </label>
+                        </div>
+                        <div class="dataItem stackRow">
+                            <div class="itemContent stackRow">
+                                <div>
+                                    <strong>Student updated</strong>
+                                    <p>Get notified when a student record is updated.</p>
+                                </div>
+                            </div>
+                            <label class="switch">
+                                <input type="checkbox">
+                                <span class="track"></span>
+                            </label>
+                        </div>
+                        <div class="dataItem stackRow">
+                            <div class="itemContent stackRow">
+                                <div>
+                                    <strong>Student deleted</strong>
+                                    <p>Get notified when a student record is deleted.</p>
+                                </div>
+                            </div>
+                            <label class="switch">
+                                <input type="checkbox" checked>
+                                <span class="track"></span>
+                            </label>
+                        </div>
+                        <div class="dataItem stackRow">
+                            <div class="itemContent stackRow">
+                                <div>
+                                    <strong>System notifications</strong>
+                                    <p>Get notified about system updates and changes.</p>
+                                </div>
+                            </div>
+                            <label class="switch">
+                                <input type="checkbox">
+                                <span class="track"></span>
+                            </label>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <div class="dangerSection stack cards">
+                        <div class="iconHeading stackRow">
+                            <div class="alertIcon stack">
+                                <i data-lucide="triangle-alert"></i>
+                            </div>
+                            <div>
+                                <h2>Danger Zone</h2>
+                                <p>These actions are permanent and cannot be undone.</p>
+                            </div>
+                        </div>
+                        <div class="dangerAction stackRow">
+                            <div class="actionContent stackRow">
+                                <div class="dashIcon alertIcon stack">
+                                    <i data-lucide="trash"></i>
+                                </div>
+                                <div>
+                                    <strong>Delete All Student Records</strong>
+                                    <p>This will permanently delete all student data from your system.</p>
+                                </div>
+                            </div>
+                            <button type="button" class="btn eraseDataBtn">Erase Data</button>
+                        </div>
+                    </div>
+                </section>
+            </main>
+            <footer>
+                <p>&copy; 2026 Student Record Manager. All right reserved</p>
+                <span>v.1.0.0</span>
+            </footer>
+        </div>
+    </div>
+
+    <!--  ACTION CONFIRMATION MODEL  -->
+    <div class="confirmModel stack">
+        <div class="confirmBox stack">
+            <p class="confirmBoxPera"></p>
+            <div class="confirmActions stackRow">
+                <button class="actionBtns cancelBtn">Cancel</button>
+                <button class="actionBtns confirmBtn">Confirm</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+    <script src="/js/app.js"></script>
+    <script src="/js/data.js"></script>
+    <script src="/js/setting.js"></script>
+</body>
+
+</html>
