@@ -6,7 +6,7 @@ This project was built as part of my JavaScript practice series, with the goal o
 
 ## Live Demo
 
-Live demo: [https://your-project-name.vercel.app](https://your-project-name.vercel.app)
+Live demo: [https://student-record-manager-nine.vercel.app/](https://student-record-manager-nine.vercel.app/)
 
 To explore the app quickly, open **Settings** and use **Load Demo Students** to fill it with sample records.
 
